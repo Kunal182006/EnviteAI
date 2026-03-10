@@ -1,0 +1,128 @@
+{
+  "identity": {
+    "name": "InviteAI",
+    "theme": "Modern Mahal",
+    "tone": "Royal, Tech-Forward, Culturally Rich, Expensive",
+    "description": "A fusion of Gamma.app's modern gradient aesthetic with the grandeur of Indian royal weddings. Deep jewel tones, metallic gold accents, and intricate mandala motifs meet glassmorphism and smooth motion."
+  },
+  "typography": {
+    "font_family": {
+      "heading_english": "Cinzel Decorative, serif",
+      "heading_hindi": "Rozha One, serif",
+      "body_ui": "Outfit, sans-serif",
+      "body_card": "Anek Devanagari, sans-serif"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-black tracking-tight leading-tight",
+      "h2": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold",
+      "body_large": "text-lg md:text-xl leading-relaxed",
+      "body_base": "text-base leading-relaxed text-muted-foreground",
+      "caption": "text-sm font-medium tracking-wider uppercase text-muted-foreground/80"
+    },
+    "pairing_rules": [
+      "Use 'Cinzel Decorative' for English Hero headings ONLY.",
+      "Use 'Rozha One' for Hindi Hero headings.",
+      "Use 'Outfit' for all App UI (Sidebar, Chat, Buttons, Inputs).",
+      "Use 'Anek Devanagari' for the actual Invitation Card text (supports both scripts beautifully)."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "DEFAULT": "#4f46e5",
+        "foreground": "#ffffff",
+        "description": "Electric Indigo - Modern Tech feel, used for primary actions in dark mode"
+      },
+      "secondary": {
+        "DEFAULT": "#d4af37",
+        "foreground": "#0f0f10",
+        "description": "Jaipur Gold - Metallic, non-yellow gold. Used for borders, icons, and premium accents"
+      },
+      "background": {
+        "app": "#0a0a0a",
+        "card": "#171717",
+        "paper": "#fdfbf7"
+      },
+      "accent": {
+        "rani_pink": "#db2777",
+        "marigold": "#f59e0b",
+        "emerald": "#047857"
+      },
+      "gradients": {
+        "royal_mesh": "bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-purple-900 via-slate-950 to-black",
+        "gold_shine": "bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728]",
+        "gamma_glow": "bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500"
+      }
+    },
+    "rules": [
+      "APP UI must be DARK MODE by default to make Gold pop.",
+      "INVITATION CARD PREVIEWS must be LIGHT MODE (Ivory/Paper) to look printable.",
+      "Text on Gold backgrounds must be Dark (#0f0f10).",
+      "Text on Dark backgrounds must be Off-White (#f8fafc), never pure white."
+    ]
+  },
+  "layout": {
+    "spacing": {
+      "container_padding": "p-6 md:p-12",
+      "section_gap": "gap-12 md:gap-24",
+      "component_gap": "gap-6"
+    },
+    "grids": {
+      "dashboard": "grid-cols-1 md:grid-cols-12 gap-6",
+      "gallery": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8",
+      "chat_layout": "grid grid-cols-1 lg:grid-cols-[400px_1fr] h-[calc(100vh-4rem)]"
+    },
+    "radius": {
+      "card": "rounded-xl",
+      "button": "rounded-full",
+      "input": "rounded-lg"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white shadow-lg shadow-indigo-500/20 transition-all hover:scale-105",
+      "gold": "bg-gradient-to-r from-[#bf953f] to-[#b38728] text-black font-bold shadow-lg shadow-yellow-500/20 hover:shadow-yellow-500/40",
+      "ghost": "hover:bg-white/10 text-white/80 hover:text-white"
+    },
+    "cards": {
+      "glass": "bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl",
+      "paper": "bg-[#fdfbf7] text-slate-900 border-none shadow-[0_2px_8px_rgba(0,0,0,0.08)] bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"
+    },
+    "inputs": {
+      "style": "bg-black/20 border-white/10 focus:border-purple-500/50 focus:ring-purple-500/20 text-white placeholder:text-white/30 backdrop-blur-sm"
+    }
+  },
+  "visual_assets": {
+    "image_urls": {
+      "hero_couple": "https://images.unsplash.com/photo-1722952934708-749c22eb2e58?fm=jpg&q=80&w=2000",
+      "texture_gold_wall": "https://plus.unsplash.com/premium_photo-1769900505374-5af83247800b?fm=jpg&q=80&w=2000",
+      "motif_mehendi": "https://plus.unsplash.com/premium_photo-1682092632793-c7d75b23718e?fm=jpg&q=80&w=2000",
+      "decor_flowers": "https://images.unsplash.com/photo-1772127822454-8566c23084df?fm=jpg&q=80&w=2000",
+      "couple_traditional": "https://images.unsplash.com/photo-1665960213508-48f07086d49c?fm=jpg&q=80&w=2000",
+      "wedding_fire": "https://plus.unsplash.com/premium_photo-1754759085353-d4ef2feb53c5?fm=jpg&q=80&w=2000",
+      "mandala_art": "https://images.unsplash.com/photo-1763930286396-51eb06f6f23a?fm=jpg&q=80&w=2000"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-1 md:stroke-[1.5]",
+      "custom_installation_required": false
+    }
+  },
+  "motion": {
+    "philosophy": "Smooth, majestic, cinematic. No jerky movements.",
+    "classes": {
+      "fade_in": "animate-in fade-in duration-700 ease-out",
+      "slide_up": "animate-in slide-in-from-bottom-8 fade-in duration-700 ease-out",
+      "hover_lift": "transition-transform duration-300 hover:-translate-y-1"
+    }
+  },
+  "universal_guidelines": [
+    "Always add `data-testid` to interactive elements.",
+    "Use `sonner` for toast notifications.",
+    "Components must use named exports.",
+    "Do not use gradients for dark colors; use solid deep colors.",
+    "Ensure 2-3x more spacing than typical defaults.",
+    "Glassmorphism requires `backdrop-blur-xl` and a subtle 1px border."
+  ]
+}
