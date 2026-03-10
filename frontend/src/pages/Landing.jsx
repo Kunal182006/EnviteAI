@@ -332,8 +332,8 @@ export function Landing() {
             </Card>
 
             {/* Early Bird Tier */}
-            <Card className="glass-card border-[#d4af37]/30 hover-lift overflow-hidden relative" data-testid="pricing-earlybird">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728]" />
+            <Card className="glass-card border-[#d4af37]/30 hover-lift overflow-hidden relative z-10" data-testid="pricing-earlybird">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#bf953f] via-[#fcf6ba] to-[#b38728] z-0" />
               <CardContent className="p-8">
                 <div className="text-center mb-6">
                   <Badge className="bg-[#d4af37]/20 text-[#fcf6ba] border-[#d4af37]/30 mb-2">
@@ -374,8 +374,8 @@ export function Landing() {
             </Card>
 
             {/* Premium Tier */}
-            <Card className="glass-card border-purple-500/30 hover-lift overflow-hidden relative" data-testid="pricing-premium">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500" />
+            <Card className="glass-card border-purple-500/30 hover-lift overflow-hidden relative z-10" data-testid="pricing-premium">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 z-0" />
               <CardContent className="p-8">
                 <div className="text-center mb-6">
                   <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30 mb-2">
