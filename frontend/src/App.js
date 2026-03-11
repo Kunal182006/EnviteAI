@@ -4,6 +4,8 @@ import { AuthCallback } from './components/AuthCallback';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import { Navbar } from './components/Navbar';
 import { Landing } from './pages/Landing';
+import { Templates } from './pages/Templates';
+import { Customize } from './pages/Customize';
 import { Create } from './pages/Create';
 import { Results } from './pages/Results';
 import { Dashboard } from './pages/Dashboard';
@@ -25,6 +27,15 @@ function AppRouter() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/templates" element={<Templates />} />
+        <Route 
+          path="/customize/:templateId" 
+          element={
+            <ProtectedRoute>
+              <Customize />
+            </ProtectedRoute>
+          } 
+        />
         <Route 
           path="/create" 
           element={

@@ -73,6 +73,12 @@ class Wedding(BaseModel):
     venue: Optional[str] = None
     parents_names: Optional[str] = None
     couple_photo_url: Optional[str] = None
+    template_id: Optional[str] = None
+    language: str = "hindi"
+    add_english: bool = False
+    add_video: bool = False
+    video_style: Optional[str] = None
+    generate_all_cards: bool = False
     status: str = "creating"
     conversation_history: List[Dict[str, Any]] = []
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
@@ -87,6 +93,12 @@ class WeddingCreate(BaseModel):
     venue: Optional[str] = None
     parents_names: Optional[str] = None
     couple_photo_url: Optional[str] = None
+    template_id: Optional[str] = None
+    language: str = "hindi"
+    add_english: bool = False
+    add_video: bool = False
+    video_style: Optional[str] = None
+    generate_all_cards: bool = False
 
 class WeddingUpdate(BaseModel):
     bride_name: Optional[str] = None
@@ -586,7 +598,9 @@ async def generate_designs(wedding_id: str, request: Request):
             }
             
             await db.designs.insert_one(design_doc)
-            all_designs.append(design_doc)
+            # Remove _id field that MongoDB adds to avoid serialization issues
+            clean_design_doc = {k: v for k, v in design_doc.items() if k != "_id"}
+            all_designs.append(clean_design_doc)
     
     # Update wedding status
     await db.weddings.update_one(

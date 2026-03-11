@@ -138,13 +138,21 @@ export function Landing() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
             <Button 
-              onClick={handleGetStarted}
+              onClick={() => navigate('/templates')}
               className="btn-gold text-lg px-8 py-6 rounded-full font-bold animate-pulse-gold"
               data-testid="hero-cta-btn"
             >
               <Sparkles className="w-5 h-5 mr-2" />
-              शुरू करें | Start Creating FREE
+              Browse Templates
               <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button 
+              onClick={handleGetStarted}
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10 px-8 py-6 rounded-full text-lg"
+              data-testid="hero-chat-btn"
+            >
+              Or Chat with AI
             </Button>
           </div>
 
@@ -484,17 +492,27 @@ export function Landing() {
             Ready to Create Your Dream Invitation?
           </h2>
           <p className="font-outfit text-white/60 text-lg mb-8">
-            Join thousands of couples who trusted InviteAI for their special day
+            Choose from 16 beautiful templates or chat with AI
           </p>
-          <Button 
-            onClick={handleGetStarted}
-            className="btn-gold text-lg px-10 py-6 rounded-full font-bold"
-            data-testid="cta-final-btn"
-          >
-            <Sparkles className="w-5 h-5 mr-2" />
-            Create Your Invitation Now
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button 
+              onClick={() => navigate('/templates')}
+              className="btn-gold text-lg px-10 py-6 rounded-full font-bold"
+              data-testid="cta-final-btn"
+            >
+              <Sparkles className="w-5 h-5 mr-2" />
+              Browse Templates
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button 
+              onClick={handleGetStarted}
+              variant="outline"
+              className="border-white/20 text-white hover:bg-white/10 px-8 py-6 rounded-full text-lg"
+              data-testid="cta-chat-btn"
+            >
+              Chat with AI Instead
+            </Button>
+          </div>
         </div>
       </section>
 

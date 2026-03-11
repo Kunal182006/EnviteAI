@@ -38,11 +38,11 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <Link 
-              to="/#features" 
+              to="/templates" 
               className="text-white/70 hover:text-white transition-colors text-sm font-medium"
-              data-testid="nav-features"
+              data-testid="nav-templates"
             >
-              Features
+              Templates
             </Link>
             <Link 
               to="/#pricing" 
@@ -62,7 +62,7 @@ export function Navbar() {
             {user ? (
               <div className="flex items-center gap-4">
                 <Button
-                  onClick={() => navigate('/create')}
+                  onClick={() => navigate('/templates')}
                   className="btn-gold rounded-full px-6"
                   data-testid="nav-create-btn"
                 >
@@ -160,11 +160,11 @@ export function Navbar() {
         <div className="md:hidden bg-[#0a0a0a]/95 backdrop-blur-xl border-t border-white/5">
           <div className="px-4 py-4 space-y-4">
             <Link 
-              to="/#features" 
+              to="/templates" 
               className="block text-white/70 hover:text-white py-2"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Features
+              Templates
             </Link>
             <Link 
               to="/#pricing" 
@@ -185,14 +185,14 @@ export function Navbar() {
               <>
                 <Button
                   onClick={() => {
-                    navigate('/create');
+                    navigate('/templates');
                     setMobileMenuOpen(false);
                   }}
                   className="w-full btn-gold rounded-full"
                   data-testid="nav-mobile-create-btn"
                 >
                   <Sparkles className="w-4 h-4 mr-2" />
-                  Create New
+                  Browse Templates
                 </Button>
                 <Button
                   onClick={() => {
