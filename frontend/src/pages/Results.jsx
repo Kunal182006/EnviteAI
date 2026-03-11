@@ -65,11 +65,14 @@ export function Results() {
       ]);
       
       setWedding(weddingData);
-      setDesigns(designsData);
+      
+      // Ensure designsData is an array
+      const designsArray = Array.isArray(designsData) ? designsData : [];
+      setDesigns(designsArray);
       
       // Set initially selected designs
       const selected = {};
-      designsData.forEach(d => {
+      designsArray.forEach(d => {
         if (d.is_selected) {
           selected[d.card_type] = d.id;
         }
@@ -78,6 +81,7 @@ export function Results() {
     } catch (error) {
       console.error('Failed to load data:', error);
       toast.error('Failed to load designs');
+      setDesigns([]);
     } finally {
       setLoading(false);
     }
@@ -106,11 +110,14 @@ export function Results() {
     setIsRefining(true);
     try {
       const result = await designsApi.generate(weddingId);
-      setDesigns(result.designs);
-      toast.success(`${result.designs.length} new designs created!`);
+      // Ensure result.designs is an array
+      const newDesigns = Array.isArray(result.designs) ? result.designs : [];
+      setDesigns(newDesigns);
+      toast.success(`${newDesigns.length} new designs created!`);
     } catch (error) {
       console.error('Failed to regenerate:', error);
       toast.error('Failed to regenerate designs');
+      setDesigns([]);
     } finally {
       setIsRefining(false);
     }
@@ -225,6 +232,10 @@ export function Results() {
   };
 
   const getDesignsByType = (cardType) => {
+    // Ensure designs is an array before filtering
+    if (!Array.isArray(designs)) {
+      return [];
+    }
     return designs.filter(d => d.card_type === cardType);
   };
 
